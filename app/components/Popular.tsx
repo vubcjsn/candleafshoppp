@@ -1,72 +1,52 @@
 "use client";
 
 import Image from "next/image";
-import Images from "@/public/images";
+
 type Product = {
   name: string;
   image: string;
   price: string;
 };
 
-const products: Product[] = [
+const popularProducts: Product[] = [
   {
     name: "Spiced Mint",
-    image: "/candles/spiced-mint.png",
+    image: "/images/mint.jpg", // update with your actual image names/paths
     price: "9.99$",
   },
   {
     name: "Sweet Strawberry",
-    image: "/candles/sweet-strawberry.png",
+    image: "/images/strawberry.jpg",
     price: "9.99$",
   },
   {
     name: "Cool Blueberries",
-    image: "/candles/cool-blueberries.png",
+    image: "/images/blueberries.jpg",
     price: "9.99$",
   },
   {
     name: "Juicy Lemon",
-    image: "/candles/juicy-lemon.png",
-    price: "9.99$",
-  },
-  {
-    name: "Product name",
-    image: "/candles/product-name.png",
-    price: "9.99$",
-  },
-  {
-    name: "Fragrant Cinnamon",
-    image: "/candles/fragrant-cinnamon.png",
-    price: "9.99$",
-  },
-  {
-    name: "Summer Cherries",
-    image: "/candles/summer-cherries.png",
-    price: "9.99$",
-  },
-  {
-    name: "Clean Lavander",
-    image: "/candles/clean-lavander.png",
+    image: "/images/lemon.jpg",
     price: "9.99$",
   },
 ];
 
-export default function ProductsSection() {
+export default function PopularSection() {
   return (
     <section className="w-full flex flex-col items-center py-16 bg-white">
-      <h2 className="text-4xl font-medium text-[#0B254B] mb-2 hover:text-[#5BC08A] transition">
-        Products
+      <h2 className="text-4xl font-medium text-[#0B254B] mb-2  hover:text-[#5BC08A] transition">
+        Popular
       </h2>
       <p className="text-[#5E6E89] text-lg mb-12">
-        Order it for you or for your beloved ones
+        Our top selling product that you may like
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl w-full justify-items-center">
-        {products.map((product, idx) => (
+        {popularProducts.map((product, idx) => (
           <div
             key={product.name + idx}
             className="bg-[#F7F8FA] p-6 rounded-2xl shadow-md flex flex-col items-center transition duration-200 hover:shadow-lg min-w-[200px]"
           >
-            <div className="w-[120px] h-[120px] mb-4 relative">
+            <div className="w-[96px] h-[120px] mb-4 relative">
               <Image
                 src={product.image}
                 alt={product.name}

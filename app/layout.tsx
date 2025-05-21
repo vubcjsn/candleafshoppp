@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Products from "./components/Products";
 import SoyWaxSection from "./components/SoyWaxSection";
 import Testimonial from "./components/Testimonial";
-
+import Popular from "./components/Popular";
 const roboto = Roboto({
   weight: ["400", "500", "700"],
   subsets: ["Latin"],
@@ -36,6 +36,7 @@ export default function RootLayout({
         <Products />
         <SoyWaxSection />
         <Testimonial />
+        <Popular />
         <Footer />
       </body>
     </html>

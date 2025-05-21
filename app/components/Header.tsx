@@ -7,9 +7,9 @@ import { BsCart3 } from "react-icons/bs";
 
 function Header() {
   return (
-    <header className="py-5 ">
+    <header className="py-5 mx-8 w-full bg-white shadow-sm sticky top-0 z-50">
       <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <Link href="/">
             <Logo />
           </Link>
